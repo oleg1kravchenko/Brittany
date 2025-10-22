@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru" class="scroll-smooth">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Brittany</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="src/output.css" rel="stylesheet">
+	 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="rounded-customer text-primary font-sans lg:text-base text-sm">
+
+	<header class="absolute top-0 left-0 w-full z-50 py-4 lg:py-12">
+		<div class="max-w-6xl mx-auto px-4 flex justify-between items-center gap-4 lg:gap-8">
+			<a href="#">
+				<img src="img/logo.svg" class="w-26" alt="alt">
+			</a>
+			<ul class="flex items-center gap-4 lg:gap-8 font-semibold ml-auto">
+				<li><a href="#sect-home" class="text-primary">Home</a></li>
+				<li><a href="#sect-about" class="text-primary">About</a></li>
+			</ul>
+			<div x-data="{modalIsOpen: false}">
+				<button x-on:click="modalIsOpen = true" class="inline-flex justify-center items-center text-center h-10 lg:h-13 px-4 lg:px-8 bg-main rounded-4xl text-white font-semibold duration-300 hover:bg-blue-500 cursor-pointer">Contact</button>
+				<div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen" x-on:keydown.esc.window="modalIsOpen = false" x-on:click.self="modalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
+					<!-- Modal Dialog -->
+					<div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-lg bg-white text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
+						<!-- Dialog Header -->
+						<div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 p-4 dark:border-outline-dark dark:bg-surface-dark/20">
+							<h3 id="defaultModalTitle" class="font-semibold text-2xl">Special Offer</h3>
+							<button x-on:click="modalIsOpen = false" aria-label="close modal">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+								</svg>
+							</button>
+						</div>
+						<div class="px-4 py-8"> 
+							<p>As a token of appreciation, we have an exclusive offer just for you. Upgrade your account now to unlock premium features and enjoy a seamless experience.</p>
+						</div>
+						<!-- Dialog Footer -->
+						<div class="flex flex-col-reverse justify-between gap-2 border-t border-outline bg-surface-alt/60 p-4 dark:border-outline-dark dark:bg-surface-dark/20 sm:flex-row sm:items-center md:justify-end">
+							<button x-on:click="modalIsOpen = false" type="button" class="whitespace-nowrap rounded-radius px-4 py-2 text-center text-sm font-medium tracking-wide text-on-surface transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:opacity-100 active:outline-offset-0 dark:text-on-surface-dark dark:focus-visible:outline-primary-dark cursor-pointer">Remind me later</button>
+							<button x-on:click="modalIsOpen = false" type="button" class="inline-flex justify-center items-center text-center h-10 lg:h-13 px-4 lg:px-8 bg-main rounded-4xl text-white font-semibold duration-300 hover:bg-blue-500 cursor-pointer">Upgrade Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="flex flex-col h-dvh text-center items-center justify-center bg-gradient-to-b from-[#fff0f4] to-[#fff3f6] relative z-10 min-h-120">
+		<h1 class="text-4xl lg:text-8xl font-bold font-sans leading-normal mb-2.5 lg:mb-0">Hi, I’m Brittany</h1>
+		<h2 class="text-xl lg:text-3xl max-w-2xl mx-auto font-thin mb-7">I’m a UX designer. I’m passionate about creating usable digital products.</h2>
+		<ul class="flex justify-center gap-4">
+			<li><a href="#" target="_blank" class="flex items-center justify-center w-16 h-16 rounded-full bg-white border border-gray-300 duration-300 hover:scale-105"><img src="img/behance.svg" alt="alt"></a></li>
+			<li><a href="#" target="_blank" class="flex items-center justify-center w-16 h-16 rounded-full bg-white border border-gray-300 duration-300 hover:scale-105"><img src="img/linkedin.svg" alt="alt"></a></li>
+		</ul>
+		<div class="absolute top-20 lg:top-28 right-0">
+			<img src="img/figure1.svg" class="w-10 lg:w-auto" alt="alt">
+		</div>
+		<div class="absolute -bottom-10 lg:-bottom-28 left-0">
+			<img src="img/figure2.svg" class="w-10 lg:w-auto" alt="alt">
+		</div>
+		<div class="absolute top-0 left-0 bottom-12 right-0 -z-10 bg-[radial-gradient(50%_50%_at_50%_50%,_#fff_28.65%,_rgba(255,240,241,0.99)_100%)]"></div>
+	</section>
+
+	<section class="bg-[#190a46] pt-24 pb-12 text-white" id="sect-home">
+		<div class="max-w-6xl mx-auto px-4 lg:grid grid-cols-2 items-center">
+			<div class="w-full pt-[100%] rounded-full bg-[#C27CFA] relative">
+				<div class="flex items-center justify-center absolute top-0 left-0 w-full h-full">
+					<img src="img/mockups.png" alt="alt">
+				</div>
+			</div>
+			<div class="lg:pl-28 flex flex-col gap-4 items-start mt-20 lg:mt-0">
+				<div class="inline-flex justify-center items-center text-center py-2 px-3 text-xs bg-[#f26a2c] rounded-3xl">Grocery Delivery App</div>
+				<h2 class="text-3xl lg:text-5xl font-bold">FreshToDoor</h2>
+				<p class="text-lg lg:text-xl">UX Design | UI Design | Mobile App Design</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="pt-12 lg:pt-24 pb-12 bg-[radial-gradient(50%_50%_at_50%_50%,#fffaf9_0%,rgba(224,213,209,0.5)_100%)]" id="sect-about">
+		<div class="max-w-6xl mx-auto px-4 lg:grid grid-cols-2 items-center">
+			<div class="lg:pl-28 pb-10 lg:pb-0 flex flex-col gap-4 items-start">
+				<div class="inline-flex justify-center items-center text-center py-2 px-3 text-xs bg-[#bb9179] rounded-3xl">Website Redesign</div>
+				<h2 class="text-5xl font-bold">E-ComMart</h2>
+				<p class="text-xl">UX Design | UI Design | Website Design</p>
+			</div>
+			<div class="w-full pt-[100%] rounded-full bg-[#534541] relative">
+				<div class="flex items-center justify-center absolute top-0 lg:-top-10 left-4 lg:left-10">
+					<img src="img/comart.jpg" class="xl:max-w-none rounded-3xl border border-[#E89F5C] shadow-2xl" alt="alt">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[radial-gradient(339.08%_141.42%_at_100%_100%,#3b53ff_0.04%,#3b54fc_45.1%)] pt-28 pb-12 lg:pb-20 text-white relative z-10">
+		<div class="max-w-6xl mx-auto px-4 lg:grid grid-cols-2 items-center">
+			<div class="w-full pt-[100%] rounded-full bg-[#f8b894] relative">
+				<div class="flex items-center justify-center absolute top-0 left-0 w-full h-full">
+					<img src="img/mockup.png" alt="alt">
+				</div>
+			</div>
+			<div class="lg:pl-28 pt-24 lg:pt-0 flex flex-col gap-4 items-start">
+				<div class="inline-flex justify-center items-center text-center py-2 px-3 text-xs bg-[#f8b894] rounded-3xl text-primary">Chronic Illness Mgt App</div>
+				<h2 class="text-3xl lg:text-5xl font-bold">Health Link</h2>
+				<p class="text-lg lg:text-xl">UX Design | UI Design | Mobile App Design</p>
+			</div>
+		</div>
+		<div class="absolute top-0 left-0 bottom-0 right-0 -z-10 bg-white opacity-30 blur-2xl"></div>
+	</section>
+
+	<section class="py-12 lg:py-24 text-black">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="lg:grid grid-cols-12 gap-16 items-center">
+				<div class="col-span-7">
+					<h2 class="text-5xl lg:text-7xl leading-normal font-bold">Thank You!</h2>
+					<p>For sparing some time and review my work.</p>
+					<div class="text-xl lg:text-3xl leading-normal my-8 lg:my-12">Do you have great idea and want to share. Let’s make something amazing together</div>
+					<div x-data="{modalIsOpen: false}">
+						<button x-on:click="modalIsOpen = true" class="inline-flex justify-center items-center text-center h-10 lg:h-13 px-4 lg:px-8 bg-main rounded-4xl text-white font-semibold duration-300 hover:bg-blue-500 cursor-pointer">Get in touch with me</button>
+						<div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen" x-on:keydown.esc.window="modalIsOpen = false" x-on:click.self="modalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
+							<!-- Modal Dialog -->
+							<div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-lg bg-white text-on-surface dark:border-outline-dark dark:bg-surface-dark-alt dark:text-on-surface-dark">
+								<!-- Dialog Header -->
+								<div class="flex items-center justify-between border-b border-outline bg-surface-alt/60 p-4 dark:border-outline-dark dark:bg-surface-dark/20">
+									<h3 id="defaultModalTitle" class="font-semibold text-2xl">Special Offer 2</h3>
+									<button x-on:click="modalIsOpen = false" aria-label="close modal">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+										</svg>
+									</button>
+								</div>
+								<div class="px-4 py-8"> 
+									<p>As a token of appreciation, we have an exclusive offer just for you. Upgrade your account now to unlock premium features and enjoy a seamless experience.</p>
+								</div>
+								<!-- Dialog Footer -->
+								<div class="flex flex-col-reverse justify-between gap-2 border-t border-outline bg-surface-alt/60 p-4 dark:border-outline-dark dark:bg-surface-dark/20 sm:flex-row sm:items-center md:justify-end">
+									<button x-on:click="modalIsOpen = false" type="button" class="whitespace-nowrap rounded-radius px-4 py-2 text-center text-sm font-medium tracking-wide text-on-surface transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:opacity-100 active:outline-offset-0 dark:text-on-surface-dark dark:focus-visible:outline-primary-dark cursor-pointer">Remind me later</button>
+									<button x-on:click="modalIsOpen = false" type="button" class="inline-flex justify-center items-center text-center h-10 lg:h-13 px-4 lg:px-8 bg-main rounded-4xl text-white font-semibold duration-300 hover:bg-blue-500 cursor-pointer">Upgrade Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-5 relative mt-8 lg:mt-0">
+					<div class="border border-main w-10 lg:w-14 h-32 lg:h-44 rounded-4xl absolute bottom-12 -left-4 lg:-left-10"></div>
+					<div class="border border-[#C27CFA] w-28 h-8 rounded-4xl absolute -top-4 right-0"></div>
+					<img src="img/thanks.jpg" alt="alt">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="pb-14 lg:pb-24">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="flex justify-between flex-wrap items-center text-xs text-gray-400 lg:mr-16 border-t pt-4 gap-4 border-gray-200 font-thin">
+				<div class="flex items-center justify-between gap-4">
+					<a href="#" class="duration-300 hover:text-gray-600">Privacy policy</a>
+					<a href="#" class="duration-300 hover:text-gray-600">Cookies policy</a>
+				</div>
+				<div class="flex items-center justify-between gap-4">
+					<a href="#" class="duration-300 hover:text-gray-600">LinkedIn</a>
+					<a href="#" class="duration-300 hover:text-gray-600">Behance</a>
+					<a href="#" class="duration-300 hover:text-gray-600">Dribbble</a>
+				</div>
+			</div>	
+		</div>
+	</footer>
+
+</body>
+</html>

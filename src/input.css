@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-primary: #0A0614;
+  --color-main: #2349FF;
+  --radius-customer: 40px;
+  --font-sans: 'Buenos Aires', sans-serif;
+}
+
+* {
+    outline: none !important;
+}
+
+@font-face {
+font-family: 'Buenos Aires';
+src: local('Buenos Aires Thin'), local('Buenos-Aires-Thin'),
+    url('./fonts/BuenosAires-Thin.woff2') format('woff2'),
+    url('./fonts/BuenosAires-Thin.woff') format('woff'),
+    url('./fonts/BuenosAires-Thin.ttf') format('truetype');
+font-weight: 100;
+font-style: normal;
+}
+@font-face {
+font-family: 'Buenos Aires';
+src: local('Buenos Aires Regular'), local('Buenos-Aires-Regular'),
+    url('./fonts/BuenosAires-Regular.woff2') format('woff2'),
+    url('./fonts/BuenosAires-Regular.woff') format('woff'),
+    url('./fonts/BuenosAires-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Buenos Aires';
+src: local('Buenos Aires Bold'), local('Buenos-Aires-Bold'),
+    url('./fonts/BuenosAires-Bold.woff2') format('woff2'),
+    url('./fonts/BuenosAires-Bold.woff') format('woff'),
+    url('./fonts/BuenosAires-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+[x-cloak] {
+    display: none !important;
+}
